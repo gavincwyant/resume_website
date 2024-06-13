@@ -1,11 +1,17 @@
 import Image from "next/image";
+import Contact from "./contact_button";
+import Header from "./header";
+import Body from "./homepage_body";
+import Blurb from "./blurb";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-5xl font-extrabold">
-        GAVIN WYANT RESUME WEBSITE
+    <main className="scroll-smooth">
+      <div className="sticky top-0 z-50">
+        <Header/>
       </div>
+        <Body/>
+        <Blurb/>
     </main>
   );
 }
