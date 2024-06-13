@@ -12,6 +12,7 @@ const Contact = () => {
                 <div className="flex flex-row justify-center space-x-4 py-8  absolute w-full h-3/4 mt-28">
                     <div>
                         <form name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
                                     <input className="appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white" placeholder="first name"></input>
