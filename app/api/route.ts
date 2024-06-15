@@ -3,8 +3,8 @@ import { NextApiRequest, NextApiResponse } from "next"
 import FormData from "form-data"
 import Mailgun from "mailgun.js"
 
-const API_KEY = process.env.MAILGUN_API_KEY || ''
-const DOMAIN = process.env.MAILGUN_DOMAIN || ''
+const API_KEY = process.env.NEXT_PUBLIC_MAILGUN_API_KEY || ''
+const DOMAIN = process.env.NEXT_PUBLIC_MAILGUN_DOMAIN || ''
 
 export async function POST(request: Request){
     const mailgun = new Mailgun(FormData)
