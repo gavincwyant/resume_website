@@ -3,6 +3,7 @@
 import Header from "../header"
 import Background from "../background_image"
 import React, {useState, FormEvent} from 'react'
+import { Button, ButtonGroup } from "@nextui-org/button"
 
 const Contact = () => {
     const [firstName, setFirstName] = useState('')
@@ -37,16 +38,18 @@ const Contact = () => {
 
     return (
         <div >
-            <div className="sticky z-50"><Header/></div>
+            <div className="sticky z-40"><Header/></div>
             <Background/>
             
-            <div className="">
-                <div className="flex flex-row justify-center space-x-4 py-8  absolute w-full h-3/4 mt-28">
-                    <div>
+            <div>
+                <div className="flex flex-col justify-center items-center py-8  absolute w-full h-2/3 mt-36">
+                <div className="text-white text-4xl pb-4 font-bold">Send me an Email</div>
+                    <div className="bg-blue-900 shadow-2xl shadow-blue-300 p-6 rounded-2xl w-1/3 min-w-[300px]">
+                        
                         <form onSubmit={onSubmit}>
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
-                                    <input className="appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white" 
+                                    <input className="p-3 appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white" 
                                         placeholder="first name"
                                         value={firstName}
                                         type="text"
@@ -56,7 +59,7 @@ const Contact = () => {
                             </div>
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
-                                    <input className="appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white"
+                                    <input className="p-3 appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white"
                                         placeholder="last name"
                                         value={lastName}
                                         type="text"
@@ -66,7 +69,7 @@ const Contact = () => {
                             </div>
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
-                                    <input className="appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white" 
+                                    <input className="p-3 appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white" 
                                         placeholder="email"
                                         value={email}
                                         type="text"
@@ -76,16 +79,16 @@ const Contact = () => {
                             </div>
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
-                                    <input className="appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white"
+                                    <textarea className="pb-36 pt-4 appearance-none w-full bg-gray-200 pl-2 rounded-sm focus:bg-white"
                                         placeholder="message"
                                         value={message}
-                                        type="text"
+                                        
                                         onChange={(e) => setMessage(e.target.value)}
                                     />
                                 </div>
                             </div> 
 
-                            <button type="submit" className="bg-white rounded-sm text-gray-400">Submit</button>
+                            <button className="w-full bg-gray-200 rounded-full py-2">Submit</button>
 
                         </form>
                     </div>
