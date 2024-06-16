@@ -3,7 +3,7 @@
 const Contact = () => {
     return (
         <div >
-             <button className="h-12 w-40 bg-white rounded-3xl transition duration-1000 hover:scale-110">
+             <button className="h-12 w-40 bg-white rounded-3xl transition duration-1000 hover:scale-110 text-black">
                 Contact Me
              </button>   
         </div>
