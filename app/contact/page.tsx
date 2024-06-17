@@ -4,8 +4,10 @@ import Header from "../header"
 import Background from "../background_image"
 import React, {useState, FormEvent} from 'react'
 import { Button, ButtonGroup } from "@nextui-org/button"
+import{ useRouter } from "next/navigation"
 
 const Contact = () => {
+    const router = useRouter()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -30,6 +32,9 @@ const Contact = () => {
         }
         catch(err:any){
             console.log(err)
+        }finally{
+            alert("Thanks for reaching out! I'll get back to you as soon as possible.")
+            router.push('/')
         }
         
        
