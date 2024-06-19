@@ -1,13 +1,14 @@
 import netlifyIdentity from 'netlify-identity-widget'
 
 const netlifyAuth = {
-    isAuthenticated: false,
+    isAuthenticated: true,
     user: null,
     initialize(callback) {
       window.netlifyIdentity = netlifyIdentity
       netlifyIdentity.on('init', (user) => {
         callback(user)
       })
+      
       netlifyIdentity.init()
     },
     authenticate(callback) {
@@ -16,6 +17,7 @@ const netlifyAuth = {
       netlifyIdentity.on('login', (user) => {
         this.user = user
         callback(user)
+        location.reload()
         netlifyIdentity.close()
       })
     },
@@ -24,6 +26,7 @@ const netlifyAuth = {
       netlifyIdentity.logout()
       netlifyIdentity.on('logout', () => {
         this.user = null
+        location.reload
         callback()
       })
     },

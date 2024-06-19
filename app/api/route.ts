@@ -13,6 +13,7 @@ export async function POST(request: Request){
     const client = mailgun.client({username: 'api', key: API_KEY})
     const {firstName, lastName, email, message} = requestBody
     console.log('firstname:', firstName, 'lastname:', lastName)
+    
     const messageData = {
         from: "gavincwyant@gmail.com",
         to: 'gavincwyant@gmail.com',
@@ -26,7 +27,7 @@ export async function POST(request: Request){
         
         contact:
         ${email}`
-        
+
     }
 
     try{
