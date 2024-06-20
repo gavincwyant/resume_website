@@ -55,20 +55,20 @@ const Header = () => {
     
         <div className="flex flex-col w-full h-24  md:pr-10 fixed text-white md:flex-row">
             
-            <div className="border md:border-black md:p-2  bg-blue-500 bg-opacity-40 rounded-md justify-start flex text-nowrap flex-row h-10 md:h-24">   
+            <div className="bg-blue-400 md:bg-transparent md:p-2 bg-opacity-40 rounded-md justify-start flex text-nowrap flex-row h-10 md:h-24">   
             {loggedIn ? (
-              <div className="flex flex-row mx-4 md:flex-none md:flex-col mt-1">
+              <div className="flex flex-row mx-4 md:flex-none md:flex-col mt-2">
                 <div >
                   Welcome, {name}!
                 </div>
-                <button onClick={() => signOut()}   className="bg-blue-600 border border-black rounded-full p-1 pb-2 px-3 text-xs absolute right-0 top-0 md:relative mt-1 mr-1 md:mt-3">
+                <button onClick={() => signOut()}   className="bg-blue-600 border border-black rounded-full p-1 pb-2 px-3 text-xs absolute right-0 top-0 md:relative mt-2 mr-1 md:mt-3">
                   sign out
                 </button>
               </div>
               
                 ) : (
                     <div className="">
-                    <button onClick={() => login()}  className="bg-blue-600 md:p-4 md:mt-3 p-1 pb-2 px-3 border border-black text-xs rounded-full absolute right-0 top-0 md:relative mt-1 mr-1">
+                    <button onClick={() => login()}  className="bg-blue-600 md:p-4 md:mt-3 p-1 pb-2 px-3 border border-black text-xs rounded-full absolute right-0 top-0 md:relative mt-2 mr-1">
                         Log in/Sign Up
                     </button>
                     </div>

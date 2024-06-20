@@ -48,9 +48,9 @@ const Contact = () => {
             
             <div>
                 <div className="flex flex-col justify-center items-center py-8  absolute w-full h-2/3 mt-36">
-                <div className="text-white text-4xl pb-4 font-bold">Send me an Email</div>
+                
                     <div className="bg-blue-900 shadow-2xl shadow-blue-300 p-6 rounded-2xl w-1/3 min-w-[300px]">
-                        
+                    <div className="text-white text-xl font-bold">Send me an Email</div>
                         <form onSubmit={onSubmit}>
                             <div className="flex flex-row justify-center text-center space-x-4 pb-8">
                                 <div className="w-full">
