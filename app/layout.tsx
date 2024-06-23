@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppWrapper } from "./context";
+import Clarity from "./metrics/MicrosoftClarity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <AppWrapper>{children}</AppWrapper>
+        <AppWrapper>
+          {children}
+          <Clarity/>
+        </AppWrapper>
       </body>
     </html>
   );
